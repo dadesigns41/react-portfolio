@@ -8,6 +8,7 @@ const HeroSection = () => {
 
 	const apps = [
 		{
+			avatar: 'MW',
 			title: 'Mailwizz Pro',
 			description: 'Your Personal Fitness Companion',
 			rating: '4.9',
@@ -16,6 +17,7 @@ const HeroSection = () => {
 			features: ['Cross-Platform', 'Real-time Sync', 'Offline Mode'],
 		},
 		{
+			avatar: 'GH',
 			title: 'GitHub Dashboard',
 			description: 'Visualize Your Development Journey',
 			rating: '4.8',
@@ -24,6 +26,7 @@ const HeroSection = () => {
 			features: ['Live Updates', 'Analytics', 'API Integration'],
 		},
 		{
+			avatar: 'CN',
 			title: 'CloudNative',
 			description: 'Deploy & Manage Cloud Infrastructure',
 			rating: '4.7',
@@ -32,6 +35,7 @@ const HeroSection = () => {
 			features: ['Docker Support', 'Auto-scaling', 'CI/CD Ready'],
 		},
 		{
+			avatar: 'AS',
 			title: 'AutoScript',
 			description: 'Automate Your Workflow Effortlessly',
 			rating: '4.9',

@@ -1,6 +1,9 @@
 'use client';
 
+import type { ReactNode } from 'react';
+
 interface AppData {
+	avatar?: string | ReactNode;
 	title: string;
 	description: string;
 	rating: string;
@@ -30,17 +33,18 @@ const FeaturedAppPreview = ({ app }: FeaturedAppPreviewProps) => {
 						</svg>
 					</div>
 
-					<div className="relative p-8">
-						{/* Badge */}
-						<div className="flex justify-center">
-							<div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 group-hover:border-blue-400/30 transition-colors">
-								<span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
-								<span className="text-blue-700 text-sm font-medium">Featured App</span>
+					<div className="relative pt-14 p-8">
+                    
+
+						{/* Avatar (centered, contained) */}
+						<div className="absolute left-1/2 top-6 -translate-x-1/2">
+							<div className="w-20 h-20 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white text-2xl font-semibold shadow-2xl z-30">
+								{typeof app.avatar === 'string' ? app.avatar : app.avatar}
 							</div>
 						</div>
 
 						{/* App Info */}
-						<div className="text-center mt-6">
+						<div className="text-center mt-16 relative z-10">
 							<h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-gray-900 to-gray-800 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-purple-700 transition-all duration-300">
 								{app.title}
 							</h3>
